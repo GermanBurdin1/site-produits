@@ -1,6 +1,6 @@
 <?php
 
-include '.sql/mainPage.php';
+include 'sql/mainPage.php';
 
 try {
     $host = "localhost";
@@ -8,9 +8,9 @@ try {
     $user = "root";
     $pwd = "";
     $connexion = new PDO("mysql:host=$host;dbname=$dbname", $user, $pwd); 
-    
-    $resultat = top10($connexion);
-    $resultat->execute();
+    $sql = top10();
+    $resultat = $connexion->prepare($sql); 
+    $resultat->execute(); 
     
     $data = $resultat->fetchAll(PDO::FETCH_ASSOC);
     
