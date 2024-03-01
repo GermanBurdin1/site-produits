@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="monsite.css">
+    <title>Mon Site Web</title>
+</head>
+<body>
+    <div id="app">
+
+        <div class="header">
+            <h1>Mon Site Web</h1>
+        </div>
+        <div class="sidebar">
+            <li class="client"><a data-page="accueil.html">Accueil</a></li>
+            <li class="accueil"><a data-page="./pages/client/client.html">Client</a></li>
+            <li class="produit"><a data-page="./pages/produit/produit.html">Produit</a></li>
+            <li class="stats"><a data-page="./pages/stats/stats.html">Stats</a></li>
+        </div>
+
+        <div class="top-products">
+            <h2 class="top-products-heading ">Nos tops produits de ce mois</h2>
+            <ul>
+
+            </ul>
+        </div>
+
+        <div class="choose-product">
+            <h2>Choisir un produit</h2>
+            <form action="traitement.php" method="post">
+                <select name="products[]" multiple>
+
+                </select>
+                <input type="submit" value="Valider">
+            </form>
+        </div>
+    </div>
+    <script src="./pageLoad.js"></script>
+</body>
+</html>
